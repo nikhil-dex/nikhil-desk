@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    /* background-color: black; */
+}
+:root{
+    --bwhite: white;
+    --bblack: #333;
+    --bdwhite: rgb(216, 216, 216);
+    --bwriten: black;
+    --bwritenb: white;
+    --bcolor: black;
+
+}
+
+body{
+    background: black;
+    color: rgb(222, 222, 222);
+    transition: background-color 0.5s ease;
+}
+
+
+
+
+
+#containerA{
+    opacity: 0;
+    width: 20%;
+    border: 1px solid var(--bwhite);
+    background-color: var(--bblack);
+    position: sticky;
+    top: 63px;
+    margin: auto;
+    height: 400px;
+    line-height: 1.8;
+    padding: 20px;
+    z-index: 1;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: amazingA linear;
+    -o-animation: amazingA linear;
+    -moz-animation: amazingA linear;
+    -webkit-animation: amazingA linear;
+    animation-timeline: scroll();
+    animation-timeline: -moz-scroll();
+    animation-timeline: -webkit-scroll();
+    animation-timeline: -o-scroll();
+}
+
+#downarrow{
+    opacity: 1;
+    animation: blink 1.4s infinite;
+}
+
+#containerA h3{
+    color: var(--bblack);
+    background-color: var(--bwhite);
+    display: inline;
+}
+#containerA #paraA p{
+    background-color: var(--bblack);
+    font-size: 14.5px;
+    color: var(--bwritenb);
+}
+#containerB{
+    /* border: 1px solid white; */
+    background-color: var(--bblack);
+    /* position: fixed; */
+    margin: 20% 0px 0px 12%;
+    display: inline-block;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    position: relative;
+    z-index: 0;
+    opacity: 0;
+    animation: fadeB linear;
+    animation-timeline: view(150px 0px);
+    /* animation-timeline: scroll(); */
+}
+
+#tablehead th{
+    background-color: var(--bwhite);
+    /* padding: 5px; */
+    color: var(--bblack);
+    border: 1px solid var(--bwhite);
+}
+#containerB .skills td{
+    border: 1px solid var(--bwhite);
+    padding: 9px;
+    color: var(--bwritenb);
+}
+#containerC{
+    background-color: var(--bblack);
+    /* width: 30%; */
+    width: fit-content;
+    position: relative;
+    z-index: 0;
+    opacity: 0;
+    border: 1px solid red;
+    margin: 20% 0px 0px 47%;
+    animation: fadeB linear;
+    animation-timeline: view(150px 0px);
+    /* animation-timeline: scroll(); */
+}
+#containerC #headC{
+    background-color: var(--bwhite);
+    color: var(--bblack);
+    text-align: center;
+}
+#containerC .projects span a{
+    color: rgb(207, 2, 207);
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+#containerC .projects h3{
+    color: var(--bwhite);
+}
+#containerC .projects span{
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid var(--bwhite);
+}
+#containerD{
+    margin: 20% 0px 0px 75%;
+    padding: 10px;
+    background-color: var(--bdwhite);
+    color: var(--bblack);
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    opacity: 0;
+    animation: fadeB linear;
+    animation-timeline: view(150px 0px);
+    /* animation-timeline: scroll(); */
+}
+
+@keyframes amazingA {
+    15%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 95%;
+        opacity: 1;
+
+    }   
+}
+
+@keyframes fadeB {
+    10%{
+        z-index: 2;
+    }
+    50%{
+        opacity: 1;
+        position: sticky;
+        top: 250px;
+        
+    }
+    99%{
+        opacity: 1;
+        
+    }
+
+    100%{
+        opacity: 0;
+        position: fixed;
+           
+    }
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+} 
+/* #containerA,#containerB,#containerC,#containerD{
+    opacity: 1;
+    animation: opazero linear;
+    animation-timeline: scroll();
+}
+*/
+
+#containerE{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10% 0px 5% 0px;
+    
+}
+#containerE .headE h3{
+    color: var(--bwhite);
+}
+
+.form-main {
+    border: 1px solid grey;
+    
+    background-color: var(--bblack);
+    color: var(--bwhite);
+    padding: 40px;
+    font-size: clamp(.5rem, 2vw, 1rem);
+
+}
+.form-main form label {
+    
+    margin-bottom: 5px;
+}
+
+.form-main form input, .form-main form select {
+    border: 1px solid #ccc;
+
+    color: var(--bwhite);
+
+}
+
+.form-main form input[type="submit"] {
+    background-color: var(--bblack);
+    color: var(--bwhite);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.form-main form input[type="submit"]:hover {
+    background-color: var(--bwhite);
+    color: red;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bwhite);
+}

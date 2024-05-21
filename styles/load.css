@@ -1,0 +1,37 @@
+:root{
+    --bwhite: white;
+    --bblack: #333;
+    --bdwhite: rgb(216, 216, 216);
+    --bwriten: black;
+    --bwritenb: white;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 50vh;
+    margin-top: 10%;
+    color: var(--bwhite);
+    font-size: 15px;
+}
+
+.loading .loader{
+    position: relative;
+    top: 10px;
+    background: var(--bwhite);
+    height: 10px;
+    width: 10px;
+    opacity: 1;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: blink 3s infinite;
+}
+
+@keyframes blink{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

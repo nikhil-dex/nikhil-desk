@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/load.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <header> <!-- header  -->
+        <div class="logo">Nikhil-<span>Desk</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" id="home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="modebtn" onclick="changeBackgroundColor()">Day-Mode <div id="divbtn"></div></button></li>
+            
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+
+    <!-- loading screen -->
+    <div class="loading">
+        <div class="loader" id="loader"></div>
+        <pre>
+            <p>Welcome to the Nikhil Portfolio..</p>
+            <p>please scroll down</p>
+        </pre>
+    </div>
+
+    <!-- main container -->
+    <div id="about"></div>
+    <main>
+        <!-- containerA about -->
+        <div id="containerA" class="containers">
+            <h3>About me <i class="fas fa-arrow-down" id="downarrow"></i></h3>
+            <article id="paraA">
+                <p id="about">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quibusdam, accusantium laborum vero praesentium sequi perspiciatis, animi rem exercitationem nemo recusandae reiciendis dolores quisquam, et eos? Nostrum accusantium assumenda sequi maxime? Tenetur, nihil similique quidem aspernatur at praesentium ipsa quas. Pariatur repellendus eum alias.
+    
+                </p>
+            </article>
+        </div>
+        <!-- containerA about end -->
+ 
+        <!-- containerB skills -->
+        <div id="containerB" class="containers">
+            <div class="skills" id="project">
+                <table>
+                    <thead>
+                        <tr id="tablehead">
+                            <th>Sno.</th>
+                            <th>Skills_</th>
+                            <th style="color: red;">Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- webdevlopemnt -->
+                            <td>.1</td>
+                            <td>Web-Development 
+                                <div class="lvl">
+                                    
+                                    <li>HTML,CSS,JS,PYTHON</li>
+                                    <li>REACT,NODE,EXPRESS,ANGULAR,FLASK,MONGODB,MYSQL</li>
+                                    
+                                </div>
+                            </td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <!-- app development -->
+                            <td>.2</td>
+                            <td>App-Development 
+                                <div class="lvl">
+                                    <li>JAVA,KOTLIN,PYTHON,MATLAB</li>
+                                    <li>Android,ios</li>
+                                </div>
+                            </td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <!-- data science -->
+                            <td>.3</td>
+                            <td>Data-Science 
+                                <div class="lvl">
+                                    
+                                    <li>PYTHON</li>
+                                    <li>FLASK</li>
+                                    
+                                </div>
+                            </td>
+                            <td>1 year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- containerB skills end -->
+
+        <!-- container C projects -->
+        <div id="containerC" class="containers">
+            <div id="headC">
+                <h3 >Projects list</h3>
+            </div>
+            <div class="projects">
+                <span>
+                    <h3>Web-Projects</h3>
+                    <a href="https://github.com/nikhil-desk">project#1</a>
+                    <a href="https://github.com/nikhil-desk">project#2</a>
+                    <a href="https://github.com/nikhil-desk">project#3</a>
+                </span>
+                <span>
+                    <h3>App-Projects</h3>
+                    <a href="https://github.com/nikhil-desk">project#1</a>
+                    <a href="https://github.com/nikhil-desk">project#2</a>
+                    <a href="https://github.com/nikhil-desk">project#3</a>
+                </span>
+                <span>
+                    <h3>Other-Projects</h3>
+                    <a href="https://github.com/nikhil-desk">project#1</a>
+                    <a href="https://github.com/nikhil-desk">project#2</a>
+                    <a href="https://github.com/nikhil-desk">project#3</a>
+                </span>
+                
+            </div>
+           
+        </div>
+        <!-- container C projects end -->
+        <!-- container D -->
+        <div id="containerD" class="containers">
+            <div class="socialmedia">
+                <h3>SocialMedia-handles</h3>
+            </div>
+            <div class="boxD">
+                <div class="eleA">
+                <a href="whatsapp.com">
+
+                    <i style="font-size:24px; color: green;" class="fa">&#xf232;</i>
+                </a>
+            </div>
+            <div class="eleA">
+                    <a href="facebook.com">
+
+                    <i style="font-size:24px; color: #1877F2;" class="fa">&#xf09a;</i>
+                </a>
+            </div>
+            <div class="eleA">
+                    <a href="instagram.com">
+
+                    <i style="font-size:24px; color: rgb(252, 118, 141);" class="fa">&#xf16d;</i>
+                </a>
+            </div>
+            <div class="eleA">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i style="font-size: 24px;  color: #0077b5; margin: 0 10px;" class="fab fa-linkedin"></i>
+                </a>
+            </div>
+                
+            </div>
+        </div>
+        <!-- container D end here -->
+        <!-- container E -->
+        <div id="containerE" class="containers">
+            <div class="headE">
+                <h3>Contact</h3>
+            </div>
+            <div class="form-main">
+                <form
+                action="send_email.php"
+                method="post"
+                id="myForm"
+                onsubmit="return validateForm()"
+              >
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+  
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+  
+                <label for="message1">Message:</label>
+                <textarea name="message1" id="message1" cols="30" rows="1"></textarea>
+
+                <input type="submit" value="Submit" />
+              </form>
+
+            </div>
+        </div>
+        <!-- container E end here -->
+
+
+    </main>
+    <!-- footer -->
+    <footer>
+        <div id="footer">
+            <div class="eleF">
+
+            </div>
+            <div class="eleF"></div>
+            <div class="eleF"></div>
+            <div class="eleF"></div>
+        </div>
+        <p id="contact">Copyright &copy; 2024: this site origin by Nikhil-desk</p>
+
+
+    </footer>
+    
+<script src="scripts/body.js"></script>
+<script src="scripts/header.js"></script>
+<script src="scripts/contact.js"></script>
+</body>
+</html>
