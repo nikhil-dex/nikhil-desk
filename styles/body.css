@@ -42,10 +42,19 @@ body{
     -moz-animation: amazingA linear;
     -webkit-animation: amazingA linear;
     animation-timeline: scroll();
-    animation-timeline: -moz-scroll();
-    animation-timeline: -webkit-scroll();
-    animation-timeline: -o-scroll();
+    -o-animation-timeline: scroll();
+    -moz-animation-timeline: scroll();
+    -webkit-animation-timeline: scroll();
+    animation-duration: 1ms;
+    -moz-animation-duration: 1ms;
+    -webkit-animation-duration: 1ms;
 }
+#containerA.visible{
+    opacity: 1;
+    width: 90vw;
+
+}
+
 
 #downarrow{
     opacity: 1;
@@ -73,8 +82,44 @@ body{
     z-index: 0;
     opacity: 0;
     animation: fadeB linear;
-    animation-timeline: view(150px 0px);
-    /* animation-timeline: scroll(); */
+    -moz-animation: fadeB linear;
+    -webkit-animation: fadeB linear;
+    -o-animation: fadeB linear;
+    animation-duration: 1ms;
+    -webkit-animation-duration: 1ms;
+    -o-animation-duration: 1ms;
+    -moz-animation-duration: 1ms;
+    animation-timeline: scroll();
+    -o-animation-timeline: scroll();
+    -moz-animation-timeline: scroll();
+    -webkit-animation-timeline: scroll();
+}
+@keyframes fadeB {
+    10%{
+        z-index: 2;
+    }
+    50%{
+        opacity: 1;
+        position: sticky;
+        top: 250px;
+        z-index: 2;
+        
+    }
+    99%{
+        opacity: 1;
+        z-index: 2;
+        position: sticky;
+        top: 250px;
+
+    }
+    
+    100%{
+        z-index: 2;
+        opacity: 1;
+        position: sticky;
+        top: 250px;
+           
+    }
 }
 
 #tablehead th{
@@ -97,10 +142,22 @@ body{
     opacity: 0;
     border: 1px solid red;
     margin: 20% 0px 0px 47%;
-    animation: fadeB linear;
-    animation-timeline: view(150px 0px);
-    /* animation-timeline: scroll(); */
+    animation: fadeC linear;
+    -moz-animation: fadeC linear;
+    -webkit-animation: fadeC linear;
+    -o-animation: fadeC linear;
+    animation-duration: 1ms;
+    -webkit-animation-duration: 1ms;
+    -o-animation-duration: 1ms;
+    -moz-animation-duration: 1ms;
+    animation-timeline: scroll();
+    -o-animation-timeline: scroll();
+    -moz-animation-timeline: scroll();
+    -webkit-animation-timeline: scroll();
+    /* animation-timeline: view(150px 0px); */
 }
+
+
 #containerC #headC{
     background-color: var(--bwhite);
     color: var(--bblack);
@@ -130,9 +187,19 @@ body{
     position: relative;
     z-index: 0;
     opacity: 0;
-    animation: fadeB linear;
-    animation-timeline: view(150px 0px);
-    /* animation-timeline: scroll(); */
+    animation: fadeC linear;
+    -moz-animation: fadeC linear;
+    -webkit-animation: fadeC linear;
+    -o-animation: fadeC linear;
+    animation-duration: 1ms;
+    -webkit-animation-duration: 1ms;
+    -o-animation-duration: 1ms;
+    -moz-animation-duration: 1ms;
+    animation-timeline: scroll();
+    -o-animation-timeline: scroll();
+    -moz-animation-timeline: scroll();
+    -webkit-animation-timeline: scroll();
+
 }
 
 @keyframes amazingA {
@@ -147,24 +214,36 @@ body{
     }   
 }
 
-@keyframes fadeB {
+@keyframes fadeC {
     10%{
         z-index: 2;
+        position: sticky;
+        top: 250px;
     }
     50%{
         opacity: 1;
         position: sticky;
         top: 250px;
+        z-index: 2;
         
     }
     99%{
         opacity: 1;
-        
-    }
+        z-index: 2;
+        position: sticky;
+        top: 250px;
 
+
+    }
+    
     100%{
-        opacity: 0;
-        position: fixed;
+        z-index: 2;
+        opacity: 1;
+        position: sticky;
+        top: 250px;
+
+        /* bottom: 119px; */
+        /* position: fixed; */
            
     }
 }
