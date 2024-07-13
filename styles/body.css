@@ -11,7 +11,6 @@
     --bwriten: black;
     --bwritenb: white;
     --bcolor: black;
-
 }
 
 body{
@@ -19,9 +18,6 @@ body{
     color: rgb(222, 222, 222);
     transition: background-color 0.5s ease;
 }
-
-
-
 
 
 #containerA{
@@ -49,11 +45,25 @@ body{
     -moz-animation-duration: 1ms;
     -webkit-animation-duration: 1ms;
 }
-#containerA.visible{
-    opacity: 1;
-    width: 90vw;
-
+.containerA{
+    border: 1px solid var(--bwhite);
+    background-color: var(--bblack);
+    position: sticky;
+    top: 63px;
+    margin: auto;
+    height: 400px;
+    line-height: 1.8;
+    padding: 20px;
+    z-index: 1;
+    opacity: 0;
+    width: 20%;
+    transition: opacity 2s linear,width 1s linear;
 }
+.amazingB {
+    opacity: 1;
+    width: 80%;
+}
+
 
 
 #downarrow{
@@ -61,23 +71,20 @@ body{
     animation: blink 1.4s infinite;
 }
 
-#containerA h3{
+#containerAHead {
     color: var(--bblack);
     background-color: var(--bwhite);
     display: inline;
 }
-#containerA #paraA p{
+#paraA p{
     background-color: var(--bblack);
     font-size: 14.5px;
     color: var(--bwritenb);
 }
 #containerB{
-    /* border: 1px solid white; */
     background-color: var(--bblack);
-    /* position: fixed; */
     margin: 20% 0px 0px 12%;
     display: inline-block;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     position: relative;
     z-index: 0;
     opacity: 0;
@@ -93,6 +100,18 @@ body{
     -o-animation-timeline: scroll();
     -moz-animation-timeline: scroll();
     -webkit-animation-timeline: scroll();
+}
+.containerB{
+    background-color: var(--bblack);
+    margin: 20% 0px 0px 12%;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    top: 250px;
+    transition: opacity 2s linear;
+
+
 }
 @keyframes fadeB {
     10%{
@@ -128,14 +147,13 @@ body{
     color: var(--bblack);
     border: 1px solid var(--bwhite);
 }
-#containerB .skills td{
+.containerB .skills td{
     border: 1px solid var(--bwhite);
     padding: 9px;
     color: var(--bwritenb);
 }
 #containerC{
     background-color: var(--bblack);
-    /* width: 30%; */
     width: fit-content;
     position: relative;
     z-index: 0;
@@ -156,23 +174,35 @@ body{
     -webkit-animation-timeline: scroll();
     /* animation-timeline: view(150px 0px); */
 }
+.containerC{
+    background-color: var(--bblack);
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    border: 1px solid red;
+    margin: 20% 0px 0px 47%;
+    top: 250px;
+    transition: opacity 2s linear;
+
+}
 
 
-#containerC #headC{
+.containerC #headC{
     background-color: var(--bwhite);
     color: var(--bblack);
     text-align: center;
 }
-#containerC .projects span a{
+.containerC .projects .eleC a{
     color: rgb(207, 2, 207);
     text-decoration: none;
     display: block;
     padding: 5px;
 }
-#containerC .projects h3{
+.containerC .projects h3{
     color: var(--bwhite);
 }
-#containerC .projects span{
+.containerC .projects .eleC{
     padding: 5px;
     display: inline-block;
     border: 1px solid var(--bwhite);
@@ -199,8 +229,27 @@ body{
     -o-animation-timeline: scroll();
     -moz-animation-timeline: scroll();
     -webkit-animation-timeline: scroll();
+    }
+.containerD{
+    margin: 20% 0px 0px 75%;
+    padding: 10px;
+    background-color: var(--bdwhite);
+    color: var(--bblack);
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    top: 250px;
+    transition: opacity 2s linear;
 
 }
+.fadeAlpha{
+    opacity: 1;
+    position: sticky;
+
+}
+
 
 @keyframes amazingA {
     15%{
@@ -208,7 +257,7 @@ body{
     }
 
     100%{
-        width: 95%;
+        width: 80%;
         opacity: 1;
 
     }   
@@ -268,7 +317,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10% 0px 5% 0px;
+    margin: 15% 0px 1% 0px;
     
 }
 #containerE .headE h3{
@@ -281,7 +330,7 @@ body{
     background-color: var(--bblack);
     color: var(--bwhite);
     padding: 40px;
-    font-size: clamp(.5rem, 2vw, 1rem);
+    /* font-size: clamp(.5rem, 2vw, 1rem); */
 
 }
 .form-main form label {
@@ -316,4 +365,72 @@ footer{
     justify-content: center;
     align-items: center;
     color: var(--bwhite);
+}
+
+@media screen and (max-width: 700px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+    .containers{
+        position: relative;
+    }
+    .containerA,#containerA{
+        height: fit-content;
+        position: relative;
+        opacity: 1;
+        transition: none;
+        width: 70%;
+        margin: 0;
+        animation: none;
+        /* padding: 0; */
+    }
+    .containerB,#containerB{
+        height: fit-content;
+        position: relative;
+        opacity: 1;
+        transition: none;
+        margin: 0;
+        animation: none;
+        top: 80px;
+        font-size: 2.4vw;
+    }
+
+    .containerC,#containerC{
+        top: 100px;
+        font-size: 2.7vw;
+        position: relative;
+        opacity: 1;
+        transition: none;
+        animation: none;
+        margin: 10px;
+        font-size: 2.3vw;
+    }
+    .containerD,#containerD{
+        top: 100px;
+        width: fit-content;
+        position: relative;
+        opacity: 1;
+        transition: none;
+        margin: 10px;
+        animation: none;
+    }
+    #containerC .projects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #containerE{
+        top: 100px;
+        flex-wrap: wrap;
+    }
+    #containerE form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 }

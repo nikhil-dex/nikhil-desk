@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="styles/load.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script> 
-    <style>
-
-    </style>
+    <!-- <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>  -->
 </head>
 <body>
 
@@ -44,8 +41,8 @@
     <div id="about"></div>
     <main>
         <!-- containerA about -->
-        <div id="containerA" class="containers">
-            <h3>About me <i class="fas fa-arrow-down" id="downarrow"></i></h3>
+        <div id="containerA" class="containerA">
+            <h3 id="containerAHead">About me <i class="fas fa-arrow-down" id="downarrow"></i></h3>
             <article id="paraA">
                 <p id="about">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quibusdam, accusantium laborum vero praesentium sequi perspiciatis, animi rem exercitationem nemo recusandae reiciendis dolores quisquam, et eos? Nostrum accusantium assumenda sequi maxime? Tenetur, nihil similique quidem aspernatur at praesentium ipsa quas. Pariatur repellendus eum alias.
@@ -56,7 +53,7 @@
         <!-- containerA about end -->
  
         <!-- containerB skills -->
-        <div id="containerB" class="containers">
+        <div id="containerB" class="containerB">
             <div class="skills" id="project">
                 <table>
                     <thead>
@@ -112,36 +109,36 @@
         <!-- containerB skills end -->
 
         <!-- container C projects -->
-        <div id="containerC" class="containers">
+        <div id="containerC" class="containerC">
             <div id="headC">
                 <h3 >Projects list</h3>
             </div>
             <div class="projects">
-                <span>
+                <div class="eleC">
                     <h3>Web-Projects</h3>
                     <a href="https://github.com/nikhil-desk">project#1</a>
                     <a href="https://github.com/nikhil-desk">project#2</a>
                     <a href="https://github.com/nikhil-desk">project#3</a>
-                </span>
-                <span>
+                </div>
+                <div class="eleC">
                     <h3>App-Projects</h3>
                     <a href="https://github.com/nikhil-desk">project#1</a>
                     <a href="https://github.com/nikhil-desk">project#2</a>
                     <a href="https://github.com/nikhil-desk">project#3</a>
-                </span>
-                <span>
+                </div>
+                <div class="eleC">
                     <h3>Other-Projects</h3>
                     <a href="https://github.com/nikhil-desk">project#1</a>
                     <a href="https://github.com/nikhil-desk">project#2</a>
                     <a href="https://github.com/nikhil-desk">project#3</a>
-                </span>
+                </div>
                 
             </div>
            
         </div>
         <!-- container C projects end -->
         <!-- container D -->
-        <div id="containerD" class="containers">
+        <div id="containerD" class="containerD">
             <div class="socialmedia">
                 <h3>SocialMedia-handles</h3>
             </div>
@@ -185,14 +182,17 @@
                 id="myForm"
                 onsubmit="return validateForm()"
               >
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+                <label for="name">Name:
+                    <input placeholder="Name" type="text" id="name" name="name" required />
+                </label>
   
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <label for="email">Email:
+                    <input placeholder="Email" type="email" id="email" name="email" required />
+                </label>
   
-                <label for="message1">Message:</label>
-                <textarea name="message1" id="message1" cols="30" rows="1"></textarea>
+                <label for="message1">
+                    <textarea placeholder="Message" name="message1" id="message1" cols="30" rows="1"></textarea>
+                </label>
 
                 <input type="submit" value="Submit" />
               </form>
@@ -218,6 +218,7 @@
 
     </footer>
     
+<script src="scripts/anim.js"></script>
 <script src="scripts/body.js"></script>
 <script src="scripts/header.js"></script>
 <script src="scripts/contact.js"></script>
