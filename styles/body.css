@@ -103,7 +103,7 @@ body{
 }
 .containerB{
     background-color: var(--bblack);
-    margin: 20% 0px 0px 12%;
+    margin: 20% 0px 0px 18%;
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -181,7 +181,7 @@ body{
     z-index: 2;
     opacity: 0;
     border: 1px solid red;
-    margin: 20% 0px 0px 47%;
+    margin: 20% 0px 0px 38%;
     top: 250px;
     transition: opacity 2s linear;
 
@@ -231,7 +231,7 @@ body{
     -webkit-animation-timeline: scroll();
     }
 .containerD{
-    margin: 20% 0px 0px 75%;
+    margin: 20% 0px 0px 70%;
     padding: 10px;
     background-color: var(--bdwhite);
     color: var(--bblack);
@@ -368,12 +368,31 @@ footer{
 }
 
 @media screen and (max-width: 700px){
+   body{
+       background: linear-gradient(0deg, #000, #fff);
+       background-size: 200% 200%;
+       animation: gradientAnimation 5s ease infinite;
+
+   }
+   @keyframes gradientAnimation {
+       0% {
+           background-position: 0% 50%;
+       }
+       50% {
+           background-position: 100% 50%;
+       }
+       100% {
+           background-position: 0% 50%;
+       }
+   }
     main{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center
+        align-items: center;
+       
     }
+
     .containers{
         position: relative;
     }
